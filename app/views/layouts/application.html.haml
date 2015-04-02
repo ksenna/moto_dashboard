@@ -1,0 +1,25 @@
+!!!
+%html
+  %head
+    %title Moto Dashboard
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+    .container
+      .page-header
+        %h1 Moto Dashboard
+      %nav.navbar.navbar-default{:role => "navigation"}
+        .navbar-header
+          %button.navbar-toggle{"data-target" => "#main-menu", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+        #main-menu.collapse.navbar-collapse
+          %ul.nav.navbar-nav
+            %li= link_to 'Home', root_path
+      - flash.each do |severity, message|
+        %div{:class => "alert alert-#{severity}"}
+          = message
+      = yield

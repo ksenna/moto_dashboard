@@ -1,28 +1,14 @@
-== README
+== Rails Boilerplate
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This boilerplate project was created with minimal configuration for a Ruby on Rails application. It is intended to serve as a template for testing.
 
-Things you may want to cover:
+=== Usage
 
-* Ruby version
+* Clone the repo
+* <tt>bundle install</tt>
+* <tt>rake db:migrate</tt>
 
-* System dependencies
+To start the server:
+<tt>rails s</tt>
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Open a web browser to http://localhost:3000

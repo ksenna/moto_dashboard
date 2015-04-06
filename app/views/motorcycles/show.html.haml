@@ -1,3 +1,6 @@
 %h1= @motorcycle.name
 %strong Description:
 %p= @motorcycle.description
+
+= link_to "Delete", @motorcycle, data: { confirm: 'Are you sure?' }, method: :delete
+= link_to "Back", motorcycles_path

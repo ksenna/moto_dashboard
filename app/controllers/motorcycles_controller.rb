@@ -27,7 +27,7 @@ class MotorcyclesController < ApplicationController
   end
 
   def destroy
-    @motorcycle.destroy
+    Motorcycle.find(params[:id]).destroy
     respond_to do |format|
       format.html { redirect_to motorcycles_url, notice: 'Moto was successfully deleted.' }
       format.json { head :no_content }

@@ -1,4 +1,6 @@
-- @motorcycles.each do |motorcycle|
-  %strong= motorcycle.name
-  %p= motorcycle.description
-  %br
+- @motorcycles.in_groups_of(4) do |group|
+  .row
+    - group.compact.each do |motorcycle|
+      .col-md-4
+        %h4= link_to motorcycle.name, motorcycle
+        = motorcycle.description
